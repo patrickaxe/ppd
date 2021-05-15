@@ -1,24 +1,17 @@
-# SILO met producer 
-# Author: Di, Binyin
-
-# 
-# https://www.longpaddock.qld.gov.au/cgi-bin/silo/PatchedPointDataset.php?format=near&station=15540&radius=100000
-# http://www.bom.gov.au/climate/data/lists_by_element/stations.txt
-# 
-# 
-# 
-# library dependency: patrickaxe/ppd
-# Example input
-# lon <- 152.34
-# lat <- -27.54
-# startdate<-20200409
-# enddate<-20200527
+# `SILO met producer 
+#'https://www.longpaddock.qld.gov.au/cgi-bin/silo/PatchedPointDataset.php?format=near&station=15540&radius=100000
+#`http://www.bom.gov.au/climate/data/lists_by_element/stations.txt
+#'
+#' @param lat is the latitude of a location
+#' @param lon is the longtitude of a location
+#' @param startdate date format in YYYYmmdd
+#' @param enddate date format in YYYmmdd
+#' 
+#' @author patrickaxe
+#' 
 
 
 get_met <- function(lat, lon, startdate, enddate) {
-  require(devtools)
-  # install_github("patrickaxe/ppd")
-  require(ppd)
   stationID<-nearestStations(lon = lon, lat = lat)[1,1]
   df<-getPPD(as.character(stationID),as.character(startdate) ,as.character(enddate), 
              "vagoja9737@firmjam.com")

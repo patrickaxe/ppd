@@ -4,8 +4,15 @@
 \alias{fillDPIRDdaily}
 \title{Fill missing DPIRD daily weather data (for one year) with data from nearest PPD station.}
 \usage{
-fillDPIRDdaily(id, year, weather, dpird.apiKey, silo.apiKey,
-  start = NULL, end = NULL)
+fillDPIRDdaily(
+  id,
+  year,
+  weather,
+  dpird.apiKey,
+  silo.apiKey,
+  start = NULL,
+  end = NULL
+)
 }
 \arguments{
 \item{id}{Weather station ID.}

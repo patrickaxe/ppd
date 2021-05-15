@@ -4,8 +4,14 @@
 \alias{getRTD}
 \title{Download 'rainfall to date' data using DPIRD SCIENCE API}
 \usage{
-getRTD(station.id, forecastDate, summerStartDate, growingSeasonStartDate,
-  growingSeasonEndDate, apiKey)
+getRTD(
+  station.id,
+  forecastDate,
+  summerStartDate,
+  growingSeasonStartDate,
+  growingSeasonEndDate,
+  apiKey
+)
 }
 \arguments{
 \item{station.id}{Station id}

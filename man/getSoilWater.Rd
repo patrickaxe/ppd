@@ -4,15 +4,23 @@
 \alias{getSoilWater}
 \title{Download  'soil water' data using DPIRD SCIENCE API}
 \usage{
-getSoilWater(station.id, startDate, endDate,
-  soilType = "shallow-sandy-duplex", faoInitialisationDays = 15,
-  faoDevelopmentDays = 20, faoMidSeasonDays = 80,
-  faoLateSeasonDays = 45, faoInitialisationCropCoefficient = 0.05,
+getSoilWater(
+  station.id,
+  startDate,
+  endDate,
+  soilType = "shallow-sandy-duplex",
+  faoInitialisationDays = 15,
+  faoDevelopmentDays = 20,
+  faoMidSeasonDays = 80,
+  faoLateSeasonDays = 45,
+  faoInitialisationCropCoefficient = 0.05,
   faoDevelopmentCropCoefficient = 0.1,
   faoMidSeasonCropCoefficient = 0.45,
   faoLateSeasonCropCoefficient = 0.2,
-  faoBreakOfSeason3Days25April = 15, faoBreakOfSeason3Days5June = 5,
-  apiKey)
+  faoBreakOfSeason3Days25April = 15,
+  faoBreakOfSeason3Days5June = 5,
+  apiKey
+)
 }
 \arguments{
 \item{station.id}{Station id}
