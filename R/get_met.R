@@ -9,7 +9,7 @@
 #' 
 
 
-get_met <- function(lat, lon, startdate, enddate) {
+metProducer <- function(lat, lon, startdate, enddate) {
   stationID<-nearestStations(lon = lon, lat = lat)[1,1]
   df<-getPPD(as.character(stationID),as.character(startdate) ,as.character(enddate), 
              "vagoja9737@firmjam.com")
