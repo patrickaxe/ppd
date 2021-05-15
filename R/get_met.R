@@ -1,6 +1,5 @@
-#`SILO met producer
 #'
-#'
+#' Simple SILO met producer
 #' @param lat is the latitude of a location
 #' @param lon is the longtitude of a location
 #' @param startdate date format in YYYYmmdd
