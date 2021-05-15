@@ -1,6 +1,5 @@
-# `SILO met producer 
-#'https://www.longpaddock.qld.gov.au/cgi-bin/silo/PatchedPointDataset.php?format=near&station=15540&radius=100000
-#`http://www.bom.gov.au/climate/data/lists_by_element/stations.txt
+#`SILO met producer
+#'
 #'
 #' @param lat is the latitude of a location
 #' @param lon is the longtitude of a location
