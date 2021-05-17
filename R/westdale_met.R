@@ -13,20 +13,14 @@
 
 westdale_met<-function(get) {
   if (as.character(get) == "get") {
-    # load required libraries
     require(data.table)
     require(tidyverse)
     require(plyr)
-    # load data
     df<-fread("https://avachat.info/WDDAILY.txt", header = FALSE)
     geoinfo<-data.frame(head(read.delim("https://avachat.info/WDDAILY.txt"))[2,])
-# head_elements<-data.frame(unlist(lapply(header, strsplit, split = " ", fixed = T)))
-# colnames(head_elements)<-"obj"
-# print(head_elements)
     df<-df[!(df$V19=="24"),]
     df$maxt <- as.numeric(df$V4) 
     df$mint <- as.numeric(df$V3)
-
     meanT<-aggregate(df[, maxt:mint], list(df$V2), mean)
     meanT$avgt<-(meanT$maxt+meanT$mint)/2
     amp <-max(meanT$avgt)-min(meanT$avgt)
@@ -39,17 +33,6 @@ westdale_met<-function(get) {
       select(year,day, radn, maxt,mint, rain)
     tav<-data.frame(apply(dfsub[,4:5, drop = F],2, mean)) 
     tav<-(tav[1,1]+tav[2,1])/2
-
-
-
-
-
-# avg <- function(x) {  
-#   ( min(x) + max(x) ) / 2}
-# fcars <- sapply(dt, avg)
-# 
-# 
-# tapply(iris$Sepal.Width, iris$Species, median)
     unit<-cbind(year="()", day="()", radn = "MJ/m^2", maxt = "(oC)", mint = "(oC)", rain ="mm")
     dfsub<-rbind(unit,dfsub)
     geoinfo<-tail(data.frame(unlist(lapply(geoinfo, strsplit, split = " ", fixed = T))))
@@ -57,28 +40,17 @@ westdale_met<-function(get) {
     Longitude <-paste("Longitude = ",  geoinfo[6,])
     tav <-paste("tav = ", tav , "(oC) ! annual average ambient temperature")
     amp <- paste("amp = ", amp, "(oC) ! annual amplitude in mean monthly temperature")
-    
-    header<-rbind("!title = WestDale", NA,
-  "[weather.met.weather]",
-  Latitude,
-  Longitude,
-  tav, 
-  amp)
+    header<-rbind("!title = WestDale", NA, "[weather.met.weather]",Latitude, Longitude,tav, amp)
     rownames(header) <- NULL
     colnames(header) <-"X1"
     header<-data.frame(header)
-
-
-
-   coldfsub<-data.frame(t(colnames(dfsub)))
-   out<-rbindlist(list(coldfsub,dfsub))
-   header[nrow(header)+1,]<-NA
-   out<-rbind.fill(header, out) 
-   write.table(out, file = "Westdale.met", na="",
+    coldfsub<-data.frame(t(colnames(dfsub)))
+    out<-rbindlist(list(coldfsub,dfsub))
+    header[nrow(header)+1,]<-NA
+    out<-rbind.fill(header, out) 
+    write.table(out, file = "Westdale.met", na="",
             row.names = FALSE,
             col.names = FALSE,
             append = TRUE, quote=FALSE)
-
-# End of the Script
   }
 }
