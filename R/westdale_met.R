@@ -3,7 +3,7 @@
 #' Designed for West Dale (WA) dataset (up to date) from avachat.info
 #' 
 #' 
-#' @param get in "get" to execute the function
+#' @param get use "get" to execute the function
 #' 
 #' 
 #' @Depends data.table, tidyverse, plyr
@@ -16,9 +16,6 @@
 
 westdale_met<-function(get) {
   if (as.character(get) == "get") {
-    require(plyr)
-    require(data.table)
-    require(tidyverse)
     df<-fread("https://avachat.info/WDDAILY.txt", header = FALSE)
     geoinfo<-data.frame(head(read.delim("https://avachat.info/WDDAILY.txt"))[2,])
     df<-df[!(df$V19=="24"),]
