@@ -8,6 +8,8 @@
 #' 
 #' @author patrickaxe
 #' 
+#' 
+#' @include apsimMET.R
 
 
 metProducer <- function(lat, lon, startdate, enddate) {
