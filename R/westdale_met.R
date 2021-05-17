@@ -16,9 +16,9 @@
 
 westdale_met<-function(get) {
   if (as.character(get) == "get") {
+    require(plyr)
     require(data.table)
     require(tidyverse)
-    require(plyr)
     df<-fread("https://avachat.info/WDDAILY.txt", header = FALSE)
     geoinfo<-data.frame(head(read.delim("https://avachat.info/WDDAILY.txt"))[2,])
     df<-df[!(df$V19=="24"),]
