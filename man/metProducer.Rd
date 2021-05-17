@@ -2,22 +2,20 @@
 % Please edit documentation in R/metProducer.R
 \name{metProducer}
 \alias{metProducer}
-\title{Simple SILO met producer
-Simple SILO met producer}
+\title{Simple SILO met producer}
 \usage{
 metProducer(lat, lon, startdate, enddate)
 }
 \arguments{
-\item{lat}{is the latitude of a location}
+\item{lat}{the latitude of a location}
 
-\item{lon}{is the longtitude of a location}
+\item{lon}{the longtitude of a location}
 
 \item{startdate}{date format in YYYYmmdd}
 
 \item{enddate}{date format in YYYmmdd}
 }
 \description{
-Simple SILO met producer
 Simple SILO met producer
 }
 \author{
