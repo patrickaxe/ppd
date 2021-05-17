@@ -3,8 +3,8 @@
 #' Designed for West Dale (WA) dataset (up to date) from avachat.info
 #' 
 #' 
-#' @param type in "get" to execute the function
-#' @export a met file
+#' @param get in "get" to execute the function
+#' @export
 #' 
 #' @author patrickaxe
 

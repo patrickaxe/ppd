@@ -7,7 +7,7 @@
 westdale_met(get)
 }
 \arguments{
-\item{type}{in "get" to execute the function}
+\item{get}{in "get" to execute the function}
 }
 \description{
 Designed for West Dale (WA) dataset (up to date) from avachat.info
