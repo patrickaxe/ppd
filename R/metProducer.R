@@ -2,7 +2,7 @@
 #' Simple SILO met producer
 #' 
 #' 
-#' @include apsimMET.R
+#' @include apsimMET.R STATIONS.R
 #' @param lat is the latitude of a location
 #' @param lon is the longtitude of a location
 #' @param startdate date format in YYYYmmdd
