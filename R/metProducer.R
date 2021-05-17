@@ -1,6 +1,8 @@
 #' Simple SILO met producer
 #' Simple SILO met producer
 #' 
+#' 
+#' @include apsimMET.R
 #' @param lat is the latitude of a location
 #' @param lon is the longtitude of a location
 #' @param startdate date format in YYYYmmdd
@@ -9,7 +11,7 @@
 #' @author patrickaxe
 #' 
 #' 
-#' @include apsimMET.R
+#' @export
 
 
 metProducer <- function(lat, lon, startdate, enddate) {
