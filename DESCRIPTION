@@ -22,4 +22,5 @@ Collate:
     'getSCIENCE.R'
     'metProducer.R'
     'nearestStations.R'
+    'westdale_met.R'
 RoxygenNote: 7.1.1
