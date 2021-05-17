@@ -6,7 +6,7 @@
 #' @param get use "get" to execute the function
 #' 
 #' 
-#' @Depends plyr, data.table, tidyverse
+#' @depend plyr, data.table, tidyverse
 #' 
 #' @export
 #' @author patrickaxe
