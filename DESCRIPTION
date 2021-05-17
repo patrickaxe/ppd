@@ -14,11 +14,12 @@ License: MIT
 URL: http://www.r-project.org
 LazyData: TRUE
 Collate:
-  'apsimMET.R'
-  'getDPIRD.R'
-  'getPPD.R'
-  'getClimatology.R'
-  'getSCIENCE.R'
-  'nearestStations.R'
-  'STATIONS.R'
+    'STATIONS.R'
+    'apsimMET.R'
+    'getClimatology.R'
+    'getDPIRD.R'
+    'getPPD.R'
+    'getSCIENCE.R'
+    'metProducer.R'
+    'nearestStations.R'
 RoxygenNote: 7.1.1
