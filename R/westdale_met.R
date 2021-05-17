@@ -4,8 +4,11 @@
 #' 
 #' 
 #' @param get in "get" to execute the function
-#' @export
 #' 
+#' 
+#' @Depends data.table, tidyverse, plyr
+#' 
+#' @export
 #' @author patrickaxe
 
 
