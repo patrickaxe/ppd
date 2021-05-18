@@ -11,7 +11,7 @@ Depends:
     plyr, 
     data.table, 
     tidyverse
-Imports: 
+Imports: data.table
 Description: This package contains functions for accessing & handling SILO Patched Point weather data.
 License: MIT
 URL: http://www.r-project.org
