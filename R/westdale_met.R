@@ -5,7 +5,7 @@
 #' 
 #' @param get use "get" to execute the function
 #' 
-#' 
+#' @return output
 #' 
 #' @export
 #' @author patrickaxe
@@ -15,9 +15,9 @@
 
 westdale_met<-function(get) {
   if (as.character(get) == "get") {
-    library(plyr)
-    library(data.table)
-    library(tidyverse)
+    # library(plyr)
+    # library(data.table)
+    # library(tidyverse)
     df<-fread("https://avachat.info/WDDAILY.txt", header = FALSE)
     geoinfo<-data.frame(head(read.delim("https://avachat.info/WDDAILY.txt"))[2,])
     df<-df[!(df$V19=="24"),]
