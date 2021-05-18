@@ -7,8 +7,11 @@ Maintainer: Fiona H Evans <fiona.evans@murdoch.edu.au>
 Depends:
     R (>= 3.0.0),
     httr,
-    jsonlite
-Imports:
+    jsonlite,
+    plyr, 
+    data.table, 
+    tidyverse
+Imports: 
 Description: This package contains functions for accessing & handling SILO Patched Point weather data.
 License: MIT
 URL: http://www.r-project.org
