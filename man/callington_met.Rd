@@ -11,7 +11,7 @@ callington_met(UserName, PassWord, startdate)
 
 \item{PassWord}{as "Q1dUn!" by default}
 
-\item{startdate}{as "17/May/2021%2000:00:00" by default}
+\item{startdate}{as "17/May/2021" by default, alternatively add "%20HH:MM:SS"}
 }
 \value{
 output
