@@ -38,7 +38,8 @@ callington_met<-function(UserName,PassWord,startdate){
   names(grandchildren) <- namelist
   
   
-  temp<-grandchildren[[27]]
+  temp<-grandchildren[[paste(namelist[11])]]
+  
   
   temp<-xml_children(temp)[[6]]
   temp <- xmlParse(temp) 
@@ -155,3 +156,4 @@ callington_met<-function(UserName,PassWord,startdate){
   
   
 }
+
