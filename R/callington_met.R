@@ -14,7 +14,6 @@
 #' @author patrickaxe
 
 
-
 callington_met<-function(UserName,PassWord,startdate){
   
   require(tidyverse)
@@ -37,8 +36,8 @@ callington_met<-function(UserName,PassWord,startdate){
   
   names(grandchildren) <- namelist
   
-  
-  temp<-grandchildren[[paste(namelist[11])]]
+  temp<-grandchildren[[ namelist[!grepl("#", namelist) & !grepl("Pressure", namelist) & !grepl("Humidity", namelist)& !grepl("Signal", namelist) & !grepl("Delta T", namelist) & !grepl("Counter 2", namelist) & !grepl("Rainfall", namelist) & !grepl("Battery", namelist) & !grepl("ADC1", namelist) & !grepl("Decagon VP4", namelist)]
+  ]]
   
   
   temp<-xml_children(temp)[[6]]
@@ -156,4 +155,3 @@ callington_met<-function(UserName,PassWord,startdate){
   
   
 }
-
