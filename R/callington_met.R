@@ -17,7 +17,6 @@
 
 
 
-
 callington_met<-function(UserName,PassWord,startdate){
   
   require(tidyverse)
@@ -27,6 +26,7 @@ callington_met<-function(UserName,PassWord,startdate){
   require(XML)
   require(plyr)
   require(data.table)
+  
   
   url<-paste0("https://www.outpostcentral.com/api/2.0/dataservice/mydata.aspx","?userName=",UserName, "&password=",PassWord,"&dateFrom=", startdate)
   # httr::set_config( config( ssl_verifypeer = 0L ))
@@ -40,8 +40,8 @@ callington_met<-function(UserName,PassWord,startdate){
   names(grandchildren) <- namelist
   
   
+  temp<-grandchildren[[27]]
   
-  temp<-grandchildren[["Temperature °C"]]
   temp<-xml_children(temp)[[6]]
   temp <- xmlParse(temp) 
   # rootnode<-xmlRoot(test) 
@@ -157,3 +157,4 @@ callington_met<-function(UserName,PassWord,startdate){
   
   
 }
+
