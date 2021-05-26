@@ -19,6 +19,7 @@ LazyData: TRUE
 Collate:
     'STATIONS.R'
     'apsimMET.R'
+    'callington_met.R'
     'getClimatology.R'
     'getDPIRD.R'
     'getPPD.R'
