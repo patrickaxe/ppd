@@ -15,8 +15,6 @@
 
 
 
-
-
 callington_met<-function(UserName,PassWord,startdate){
   
   require(tidyverse)
@@ -120,8 +118,8 @@ callington_met<-function(UserName,PassWord,startdate){
   unit<-cbind(year="()", day="()", radn = "MJ/m^2", maxt = "(oC)", mint = "(oC)", rain ="mm")
   dfsub<-rbind(unit,dfsub)
   
-  Latitude <- paste("Latitude = ", "Nil")
-  Longitude <-paste("Longitude = ",  "Nil")
+  Latitude <- paste("Latitude = ", "-35.141070")
+  Longitude <-paste("Longitude = ",  "139.073090")
   tav <-paste("tav = ", tav , "(oC) ! annual average ambient temperature")
   amp <- paste("amp = ", amp, "(oC) ! annual amplitude in mean monthly temperature")
   
@@ -157,4 +155,3 @@ callington_met<-function(UserName,PassWord,startdate){
   
   
 }
-
