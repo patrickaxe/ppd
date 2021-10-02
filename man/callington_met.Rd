@@ -4,14 +4,12 @@
 \alias{callington_met}
 \title{Callington (SA) met producer}
 \usage{
-callington_met(UserName, PassWord, startdate)
+callington_met(UserName, PassWord)
 }
 \arguments{
 \item{UserName}{as "QLDUni" by default}
 
 \item{PassWord}{as "Q1dUn!" by default}
-
-\item{startdate}{as "17/May/2021" by default, alternatively add "%20HH:MM:SS"}
 }
 \value{
 output
